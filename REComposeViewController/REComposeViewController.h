@@ -24,6 +24,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "RECommonFunctions.h"
 #import "REComposeSheetView.h"
 #import "REComposeBackgroundView.h"
@@ -58,6 +59,7 @@ typedef void (^REComposeViewControllerCompletionHandler)(REComposeViewController
 @property (strong, readonly, nonatomic) UINavigationItem *navigationItem;
 @property (strong, readwrite, nonatomic) UIColor *tintColor;
 @property (strong, readwrite, nonatomic) UIImage *attachmentImage;
+@property (strong, readwrite, nonatomic) NSURL *attachmentURL;
 @property (weak, readonly, nonatomic) UIViewController *rootViewController;
 
 - (void)presentFromRootViewController;

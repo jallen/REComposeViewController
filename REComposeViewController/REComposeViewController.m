@@ -106,13 +106,13 @@
         [_paperclipView setHidden:YES];
     }
         
-    if (!_attachmentImage)
-        _attachmentImage = [UIImage imageNamed:@"REComposeViewController.bundle/URLAttachment"];
+    if (_attachmentImage) {
+        _sheetView.attachmentImage = _attachmentImage;
+    }
     
-    _sheetView.attachmentImageView.image = _attachmentImage;
-    [_sheetView.attachmentViewButton addTarget:self
-                                        action:@selector(didTapAttachmentView:)
-                              forControlEvents:UIControlEventTouchUpInside];
+    if (_attachmentURL) {
+        _sheetView.attachmentURL = _attachmentURL;
+    }
 }
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
@@ -271,7 +271,7 @@
 - (void)setAttachmentImage:(UIImage *)attachmentImage
 {
     _attachmentImage = attachmentImage;
-    _sheetView.attachmentImageView.image = _attachmentImage;
+    _sheetView.attachmentImage = _attachmentImage;
 }
 
 - (NSString *)text
