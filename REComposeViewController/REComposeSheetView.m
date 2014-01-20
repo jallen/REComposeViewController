@@ -149,6 +149,38 @@ static void *AVPlayerLayerReadyForDisplay = &AVPlayerLayerReadyForDisplay;
     }
 }
 
+- (void)setAttachmentPlayerItem:(AVPlayerItem *)playerItem {
+    _attachmentView.alpha = 0.f;
+    
+    if (!_attachmentPlayer) {
+        _attachmentPlayer = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+        _attachmentPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_attachmentPlayer];
+        _attachmentPlayerLayer.frame = CGRectMake(2, 2, 72, 72);
+        _attachmentPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        [_attachmentView.layer addSublayer:_attachmentPlayerLayer];
+        
+        // add play button
+        _attachmentPlayButton = [[PlayButton alloc] initWithFrame:CGRectMake(0, 0, 36, 36)];
+        _attachmentPlayButton.center = CGPointMake(CGRectGetMidX(_attachmentPlayerLayer.frame), CGRectGetMidY(_attachmentPlayerLayer.frame));
+        [_attachmentPlayButton addTarget:self action:@selector(_toggleAttatmentPlayerPlayStatus) forControlEvents:UIControlEventTouchUpInside];
+        [_attachmentView addSubview:_attachmentPlayButton];
+        
+        // add play tap
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_toggleAttatmentPlayerPlayStatus)];
+        [_attachmentView addGestureRecognizer:tap];
+        
+        // add notifiications
+        [self addObserver:self forKeyPath:@"attachmentPlayer.currentItem.status" options:NSKeyValueObservingOptionNew context:AVPlayerItemStatusContext];
+        [self addObserver:self forKeyPath:@"attachmentPlayerLayer.readyForDisplay" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew context:AVPlayerLayerReadyForDisplay];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_pauseAttachmentPlayer) name:AVPlayerItemDidPlayToEndTimeNotification object:_attachmentPlayer.currentItem];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_pauseAttachmentPlayer) name:UIApplicationDidEnterBackgroundNotification object:_attachmentPlayer.currentItem];
+    }
+    else {
+        [_attachmentPlayer replaceCurrentItemWithPlayerItem:playerItem];
+    }
+
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];

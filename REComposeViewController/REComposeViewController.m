@@ -113,6 +113,10 @@
     if (_attachmentURL) {
         _sheetView.attachmentURL = _attachmentURL;
     }
+    
+    if (_attachmentPlayerItem) {
+        _sheetView.attachmentPlayerItem = _attachmentPlayerItem;
+    }
 }
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
