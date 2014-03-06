@@ -24,6 +24,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreMedia/CoreMedia.h>
 #import "DEComposeTextView.h"
 
 @protocol REComposeSheetViewDelegate;

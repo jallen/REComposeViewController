@@ -25,7 +25,6 @@
 
 #import "REComposeSheetView.h"
 #import "REComposeViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "PlayButton.h"
 
 @interface REComposeSheetView()

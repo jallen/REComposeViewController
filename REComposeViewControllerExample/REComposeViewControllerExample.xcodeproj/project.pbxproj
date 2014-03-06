@@ -30,6 +30,7 @@
 		30FD6D641631F8550017516D /* REComposeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30FD6D631631F8550017516D /* REComposeViewController.bundle */; };
 		7FFFA19C18C8CD3500A2CA7B /* PlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFFA19B18C8CD3500A2CA7B /* PlayButton.m */; };
 		7FFFA19E18C8CD8E00A2CA7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */; };
+		7FFFA1A018C8CFFA00A2CA7B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFFA19F18C8CFFA00A2CA7B /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		7FFFA19A18C8CD3500A2CA7B /* PlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayButton.h; sourceTree = "<group>"; };
 		7FFFA19B18C8CD3500A2CA7B /* PlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayButton.m; sourceTree = "<group>"; };
 		7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7FFFA19F18C8CFFA00A2CA7B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFFA1A018C8CFFA00A2CA7B /* CoreMedia.framework in Frameworks */,
 				7FFFA19E18C8CD8E00A2CA7B /* AVFoundation.framework in Frameworks */,
 				30118D061631DA4F00B82F14 /* QuartzCore.framework in Frameworks */,
 				30118CD01631D0DD00B82F14 /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		30118CCA1631D0DD00B82F14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FFFA19F18C8CFFA00A2CA7B /* CoreMedia.framework */,
 				7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */,
 				30118D051631DA4F00B82F14 /* QuartzCore.framework */,
 				30118CCB1631D0DD00B82F14 /* UIKit.framework */,
