@@ -28,6 +28,8 @@
 		30554D26163255070069220E /* foursquare-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30554D25163255070069220E /* foursquare-logo@2x.png */; };
 		30B35CF517E54C820082CE0E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B35CF417E54C820082CE0E /* RECommonFunctions.m */; };
 		30FD6D641631F8550017516D /* REComposeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30FD6D631631F8550017516D /* REComposeViewController.bundle */; };
+		7FFFA19C18C8CD3500A2CA7B /* PlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFFA19B18C8CD3500A2CA7B /* PlayButton.m */; };
+		7FFFA19E18C8CD8E00A2CA7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,9 @@
 		30B35CF317E54C820082CE0E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		30B35CF417E54C820082CE0E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		30FD6D631631F8550017516D /* REComposeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = REComposeViewController.bundle; sourceTree = "<group>"; };
+		7FFFA19A18C8CD3500A2CA7B /* PlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayButton.h; sourceTree = "<group>"; };
+		7FFFA19B18C8CD3500A2CA7B /* PlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayButton.m; sourceTree = "<group>"; };
+		7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFFA19E18C8CD8E00A2CA7B /* AVFoundation.framework in Frameworks */,
 				30118D061631DA4F00B82F14 /* QuartzCore.framework in Frameworks */,
 				30118CD01631D0DD00B82F14 /* CoreGraphics.framework in Frameworks */,
 				30118CCC1631D0DD00B82F14 /* UIKit.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		30118CCA1631D0DD00B82F14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FFFA19D18C8CD8E00A2CA7B /* AVFoundation.framework */,
 				30118D051631DA4F00B82F14 /* QuartzCore.framework */,
 				30118CCB1631D0DD00B82F14 /* UIKit.framework */,
 				30118CCD1631D0DD00B82F14 /* Foundation.framework */,
@@ -154,6 +161,8 @@
 				30118D081631DBB500B82F14 /* REComposeBackgroundView.m */,
 				30118D021631D92800B82F14 /* REComposeSheetView.h */,
 				30118D031631D92800B82F14 /* REComposeSheetView.m */,
+				7FFFA19A18C8CD3500A2CA7B /* PlayButton.h */,
+				7FFFA19B18C8CD3500A2CA7B /* PlayButton.m */,
 			);
 			name = REComposeViewController;
 			path = ../REComposeViewController;
@@ -229,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30118CD81631D0DD00B82F14 /* main.m in Sources */,
+				7FFFA19C18C8CD3500A2CA7B /* PlayButton.m in Sources */,
 				30B35CF517E54C820082CE0E /* RECommonFunctions.m in Sources */,
 				30118CDC1631D0DD00B82F14 /* AppDelegate.m in Sources */,
 				30118CEB1631D18A00B82F14 /* REComposeViewController.m in Sources */,

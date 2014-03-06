@@ -22,4 +22,5 @@ DESC
   s.public_header_files = 'REComposeViewController/*.h'
 
   s.resources = "REComposeViewController/REComposeViewController.bundle"
+  s.frameworks = 'UIKit', 'AVFoundation', 'QuartzCore', 'CoreGraphics'
 end
