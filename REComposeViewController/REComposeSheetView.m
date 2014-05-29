@@ -97,8 +97,10 @@ static void *AVPlayerLayerReadyForDisplay = &AVPlayerLayerReadyForDisplay;
 }
 
 - (void)dealloc {
-    [self removeObserver:self forKeyPath:@"attachmentPlayer.currentItem.status"];
-    [self removeObserver:self forKeyPath:@"attachmentPlayerLayer.readyForDisplay"];
+    if (_attachmentPlayer) {
+        [self removeObserver:self forKeyPath:@"attachmentPlayer.currentItem.status"];
+        [self removeObserver:self forKeyPath:@"attachmentPlayerLayer.readyForDisplay"];
+    }
 }
 
 #pragma mark - Setters
